@@ -4,18 +4,19 @@ from app.models import *
 
 class SubjectDataAdmin(admin.ModelAdmin):
     list_display = ['id','name']
-admin.site.register(SubjectData)
+@admin.register(SubjectData)
 
 
 class TeacherDataAdmin(admin.ModelAdmin):
     list_display = ['id','name']
-admin.site.register(TeachersData)
+@admin.register(TeachersData)
 
 
 class StudentDataAdmin(admin.ModelAdmin):
     list_display = ['id','name']
-admin.site.register(StudentData)
+@admin.register(StudentData)
 
 class StudentResultDataAdmin(admin.ModelAdmin):
     list_display = ['id','name']
-admin.site.register(StudentExamResultData)
+
+admin.register(StudentExamResultData,StudentResultDataAdmin)

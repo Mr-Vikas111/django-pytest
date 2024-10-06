@@ -44,10 +44,15 @@ class StudentData(BaseModel):
         return str(self.name)
     
 class StudentExamResultData(BaseModel):
+    class StatusChoices(models.Choices):
+        PASS = 'Pass'
+        FAIL = 'Fail'
     student = models.ForeignKey(StudentData,on_delete=models.CASCADE,related_name="_student_result")
     teacher = models.ForeignKey(TeachersData,on_delete=models.CASCADE,related_name="_student_result")
     subject = models.ForeignKey(SubjectData,on_delete=models.CASCADE,related_name="_student_result")
-    marks = models.FloatField(default=0.0)    
+    marks = models.FloatField(default=0.0)
+    status = models.CharField(max_length=30,choices=StatusChoices.choices,blank=True,null=True)
+    
     def set_marks(self, value):
         # Convert to Decimal if it’s a float
         self.marks = Decimal(str(value))
