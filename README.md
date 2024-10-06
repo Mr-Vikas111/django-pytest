@@ -1,1 +1,1 @@
-https://github.com/OWNER/REPOSITORY/actions/workflows/WORKFLOW-FILE/badge.svg
+https://github.com/Mr-Vikas111/django-pytest/actions/workflows/Django%20pytest%20CI/badge.svg
