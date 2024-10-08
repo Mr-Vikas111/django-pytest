@@ -17,6 +17,6 @@ class StudentDataAdmin(admin.ModelAdmin):
 @admin.register(StudentData)
 
 class StudentResultDataAdmin(admin.ModelAdmin):
-    list_display = ['id','name']
-
-admin.register(StudentExamResultData,StudentResultDataAdmin)
+    list_display = ['id']
+    
+admin.site.register(StudentExamResultData,StudentResultDataAdmin)
