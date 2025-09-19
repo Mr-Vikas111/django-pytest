@@ -25,7 +25,7 @@ class StudentModelTestCase(TestCase):
         subject_1 = mixer.blend(SubjectData,name="Hindi")
         subject_2 = mixer.blend(SubjectData,name="English")
         
-        assert subject_1.name == 'Hindi'
+        assert subject_1.name == 'Hindi1'
         assert subject_2.name == 'English'
         
         
